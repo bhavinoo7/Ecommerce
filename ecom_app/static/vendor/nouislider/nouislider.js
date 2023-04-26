@@ -1598,7 +1598,7 @@
             var horizontalKeys = ["Left", "Right"];
             var verticalKeys = ["Down", "Up"];
             var largeStepKeys = ["PageDown", "PageUp"];
-            var edgeKeys = ["Home", "End"];
+            var edgeKeys = ["", "End"];
             if (options.dir && !options.ort) {
                 // On an right-to-left slider, the left and right keys act inverted
                 horizontalKeys.reverse();
@@ -1650,7 +1650,7 @@
                 to = options.spectrum.xVal[options.spectrum.xVal.length - 1];
             }
             else {
-                // Home key
+                //  key
                 to = options.spectrum.xVal[0];
             }
             setHandle(handleNumber, scope_Spectrum.toStepping(to), true, true);
