@@ -15,3 +15,11 @@ def detail(request):
 
 def shop(request):
     return render(request, "shop.html")
+
+def signup(request):
+    return render(request, "registration.html")
+
+def signin(request):
+    return render(request, "login.html")
+
+
