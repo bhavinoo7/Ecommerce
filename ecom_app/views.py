@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Product
+from django.core.paginator import Paginator
 
 def home(request):
     return render(request, "index.html")
@@ -14,7 +15,11 @@ def detail(request):
     return render(request, "detail.html")
 
 def shop(request):
-    return render(request, "shop.html")
+    product = Product.objects.all()
+    p = Paginator(Product.objects.all(),3)
+    print(p)
+    context = {'product':product}
+    return render(request, "shop.html",context)
 
 def signup(request):
     return render(request, "registration.html")

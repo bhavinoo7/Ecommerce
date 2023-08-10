@@ -7,7 +7,7 @@ class Product(models.Model):
     product_price = models.IntegerField( default=0)
     product_description = models.CharField(max_length=300)
     product_publish_date = models.DateField()
-    product_image = models.ImageField(upload_to="static/product/images", default="")
+    product_image = models.ImageField(upload_to="product/images", default="")
 
     def __str__(self):
         return self.product_name
